@@ -1,0 +1,40 @@
+<div class="">
+	<div id="sets">
+		<input type="text" id="query" ng-model="query"/>
+		<select ng-model="orderList">
+		  <option value="set_name">By name</option>
+		  <option value="-tcg_date">Newest</option>
+		  <option value="tcg_date">Oldest</option>
+		</select>
+  
+	  <ul>
+		  <li ng-click="main.loadSetCards(set.set_code, set.set_name)" ng-repeat="set in main.setList | filter:query | orderBy: orderList">
+			[{{set.set_code}}] {{set.set_name}}
+		  </li>
+		</ul>
+	</div>
+
+	
+	<div id="set-cards" class="container">
+		<div class="row">
+			<div class="col col-md-9">
+				<h2 ng-if="main.setCards.length > 0">{{ main.selectedSet.name }} Cards</h2>
+				<h2 ng-if="main.setCards.length == 0">Set Cards</h2>
+			</div>
+			<div class="col col-md-3">
+				<div  ng-if="main.setCards.length > 0" id="card-size-slider">
+					<rzslider rz-slider-model="main.cardImageSize" rz-slider-options="main.cardImageSizeSliderOptions"></rzslider>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<p ng-if="main.setCards.length == 0">Select a Set to start browsing cards</p>
+			<div class="row">
+				<div ng-repeat="card in main.setCards" class='card-info' style="width:{{main.cardImageSize}}px">
+					<img ng-click="main.getCurrentCardInfo(main.selectedSet.code, card)" ng-src="{{ main.loadCardImage(card.id, 0) }}" alt="{{ card.name }}"> 
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

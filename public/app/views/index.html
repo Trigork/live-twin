@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Live Twin | YuGiOh Companion App for Streaming</title>
+		<!-- FOR ANGULAR ROUTING -->
+		<base href="/">
+		<!-- CSS  -->
+		<!-- load bootstrap from CDN and custom CSS -->
+		<link rel="stylesheet" href="assets/libs/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/libs/font-awesome.min.css">
+		<link rel="stylesheet" href="assets/libs/animate.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/7.0.0/rzslider.min.css">
+		<link rel="stylesheet" href="assets/css/style.min.css">
+
+		<!-- JS -->
+		<!-- load angular and angular-route via CDN -->
+		<script src="assets/libs/angular.min.js"></script>
+		<script src="assets/libs/angular-route.min.js"></script>
+		<script src="assets/libs/angular-animate.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angularjs-slider/7.0.0/rzslider.min.js"></script>
+
+		<!-- services -->
+		<script src="app/services/cardService.js"></script>
+
+		<!-- controllers -->
+		<script src="app/controllers/mainCtrl.js"></script>
+
+		<!-- main Angular app files -->
+		<script src="app/app.routes.js"></script>
+		<script src="app/app.js"></script>
+	</head>
+	<body class="container" ng-app="liveTwinApp">
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Live Twin</a>
+				</div>
+			</nav>
+ 		</header>
+ 		<main>
+			<div id="content-views">
+				<div ng-view></div>
+			</div>
+ 		</main>
+	</body>
+</html>
+</html>

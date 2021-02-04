@@ -1,0 +1,34 @@
+{
+  "name": "live-twin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "angular": "latest",
+    "angular-route": "latest",
+    "angularjs-slider": "^7.0.0",
+    "body-parser": "latest",
+    "bootstrap": "latest",
+    "electron": "^11.2.2",
+    "express": "latest",
+    "got": "latest",
+    "image-downloader": "latest",
+    "jquery": "^3.5.1",
+    "popper": "^1.0.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^15.2.0",
+    "gulp": "latest",
+    "gulp-less": "latest",
+    "gulp-minify-css": "latest",
+    "gulp-nodemon": "latest",
+    "gulp-rename": "latest",
+    "morgan": "latest",
+    "nodemon": "latest"
+  },
+  "scripts": {
+    "prestart": "gulp css export_libs export_fonts",
+    "start": "gulp start"
+  }
+}

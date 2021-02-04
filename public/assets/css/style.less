@@ -1,0 +1,149 @@
+/* VARIABLES
+====================== */
+@blue: #A6D0C7;
+@purple: #993399;
+@red: #cc3333;
+@light_gray: #DDDDDD;
+
+/* MAIN
+====================== */
+body  { 
+	background:@light_gray; 
+	font-family: sans-serif;
+  	font-weight: 100;
+  	font-size: 14px;
+  	margin: 0 auto;
+}
+
+
+.rzslider{
+	width: 200px;
+
+	.rz-bar {
+		background: rgb(126, 126, 126);
+		height: 2px;
+	}
+	
+	.rz-selection {
+		background: rgb(126, 126, 126);
+	}
+	
+	.rz-pointer {
+		width: 8px;
+		height: 16px;
+		top: auto; /* to remove the default positioning */
+		bottom: 0;
+		background-color: #333;
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+	
+	.rz-pointer:after {
+		display: none;
+	}
+	
+	.rz-bubble {
+		bottom: 14px;
+	}
+	
+	.rz-limit {
+		font-weight: bold;
+		color: rgb(126, 126, 126);
+	}
+	
+	.rz-tick {
+		width: 10px;
+		height: 10px;
+		margin-left: 0px;
+		border-radius: 100%;
+		background: rgb(126, 126, 126);
+		top: -1px;
+	}
+	
+	.rz-tick.rz-selected {
+		background: rgb(126, 126, 126);
+	}
+}
+
+#sets {
+	background: whitesmoke;
+	position: relative;
+	padding: 15px;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	box-shadow: inset 1px 1px 0 white;
+	max-height: 450px;
+	margin-bottom: 20px;
+
+	#query {
+		width: 88%;
+		box-sizing: border-box;
+		font-size: 19px;
+		padding: 5px;
+		margin-bottom: 10px;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-right: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 3px 0px 0px 3px;
+		box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	select {
+		box-sizing: border-box;
+		font-size: 19px;
+		width: 10%;
+		border-radius: 0 3px 3px 0;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		border-left: 1px solid rgba(0, 0, 0, 0.1);
+		padding: 7px;
+		margin-bottom: 9.5px;
+		box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+	}
+
+	ul {
+		margin: 0 auto;
+		padding: 0;
+		max-height: 150px;
+		overflow-y: auto;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		padding: 5px 5px 0 5px;
+		border-left: none;
+		border-right: none;
+	
+		li {
+			list-style: none;
+			padding: 5px 10px 5px 10px;
+			width: 100%;
+			box-sizing: border-box;
+			cursor: pointer;
+			font-weight: bold;
+		  }
+	}
+}
+
+#sets select:focus, #query:focus {
+	border: 1px solid #FFD32E;
+	box-shadow: 0 0 10px rgba(255, 255, 0, 0.1);
+	outline: none;
+}
+
+#set-cards{
+	.container{
+		display: flex;
+		justify-content: center;
+
+		.row {
+			display: flex;
+			justify-content: flex-start;
+
+			.card-info{
+				cursor: pointer;
+				margin: 5px;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
